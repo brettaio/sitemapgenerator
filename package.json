@@ -1,0 +1,16 @@
+{
+  "name": "sitemapgenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "createList": "node generateList.js",
+    "createSiteMap": "node generateSitemap.js",
+    "full": "node generateList.js && node generateSitemap.js"
+  },
+  "author": "bretta etc ltd.",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}

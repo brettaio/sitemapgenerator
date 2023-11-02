@@ -1,0 +1,11 @@
+const fs = require('fs');
+
+const baseUrl = 'https://bretta.io';
+const routes = [
+    "/", "/changelog", "/components", "/documentation", "/index", "/index-agency", "/index-apps", "/index-blog", "/index-business", "/index-car-riding", "/index-classic-app", "/index-classic-saas", "/index-corporate", "/index-course", "/index-coworking", "/index-crypto", "/index-customer", "/index-digital-agency", "/index-ebook", "/index-email-inbox", "/index-enterprise", "/index-event", "/index-hosting", "/index-hotel", "/index-construction", "/index-real-estate", "/index-developer", "/index-seo-agency", "/index-hospital", "/index-finance", "/index-videocall", "/index-it-solution-two", "/index-freelancer", "/index-blockchain", "/index-crypto-two", "/index-integration", "/index-insurance", "/index-it-solution", "/index-job", "/index-landing-one", "/index-landing-three", "/index-landing-two", "/index-landing-four", "/index-marketing", "/index-modern-business", "/index-online-learning", "/index-payments", "/index-personal", "/index-portfolio", "/index-saas", "/index-services", "/index-shop", "/index-single-product", "/index-social-marketing", "/index-software", "/index-studio", "/index-task-management", "/index-travel", "/page-aboutus", "/page-aboutus-two", "/page-blog-detail", "/page-blog-grid", "/page-blog-list", "/page-blog-list-sidebar", "/page-blog-sidebar", "/page-case-detail", "/page-cases", "/page-contact-detail", "/page-contact-one", "/page-contact-three", "/page-contact-two", "/page-history", "/page-invoice", "/page-job-apply", "/page-job-candidate", "/page-job-company", "/page-job-detail", "/page-jobs", "/page-job-company-list", "/page-job-candidate-list", "/page-jobs-sidebar", "/page-pricing", "/page-privacy", "/page-services", "/page-team", "/page-terms", "/page-work-classic", "/page-work-detail", "/page-work-grid", "/page-work-masonry", "/page-work-modern", "/page-blog-detail-two", "/index-onepage", "/page-comingsoon", "/page-comingsoon2", "/page-error", "/page-thankyou", "/page-maintenance"
+];
+
+
+const sitemap = routes.map(route => `${baseUrl}${route}`).join('\n');
+fs.writeFileSync('sitemapList.txt', sitemap);
+console.log('sitemapList generated successfully! Check sitemapList.txt in your project directory.');
